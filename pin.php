@@ -93,14 +93,16 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-md-4">
-                <div id="pin-map">
-                  MAP PLACEHOLDER
-                </div>
+                <?php if( !empty($result["location") ): ?>
+                  <div class="acf-map">
+                    <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][2]; ?>"></div>
+                  </div>
+                <?php endif; ?>
               </div>
               <div class="col-md-8">
                 <div id="pin-detail" class="pull-right">
                   <div id="local-block">
-                    At: <?php echo $result["subLocality"]?>, <?php echo $result["locality"]?>
+                    At: <?php echo $result["location"]["subLocality"]?>, <?php echo $result["location"]["locality"]?>
                   </div>
                   <div id="img-gallery">
                     <img src="<?php echo $result["image"]?>"/>
@@ -116,5 +118,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/googlemap.js"></script>
   </body>
 </html>
