@@ -1,5 +1,6 @@
 <?php
-  $url="http://54.179.16.196:3000/getPin?pinID=53eb7fe2954d008825a5a779";
+  $pinID = $_GET['id'];
+  $url='http://54.179.16.196:3000/getPin?pinID='.$pinID;
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -81,10 +82,10 @@
               <div id="pin-title">
                 <div class="row">
                   <div class="col-md-9">
-                    <h4><?php echo $result["text"]?></h4>
+                    <h4><?php echo $result['text']?></h4>
                   </div>
                   <div class="col-md-3">
-                    <h6 class="pull-right">by <img id="profile-image" src="<?php echo $result["userImage"]?>"/> <a href="/user/<?php echo $result["userId"]?>"><?php echo $result["username"]?></a></h6>
+                    <h6 class="pull-right">by <img id="profile-image" src="<?php echo $result['userImage']?>"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h6>
                   </div>
                 </div>
               </div>
@@ -94,16 +95,16 @@
             <div class="row">
               <div class="col-md-4">
                   <div class="acf-map">
-                    <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][2]; ?>"></div>
+                    <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][0]; ?>"></div>
                   </div>
               </div>
               <div class="col-md-8">
                 <div id="pin-detail" class="pull-right">
                   <div id="local-block">
-                    At: <?php echo $result["location"]["subLocality"]?>, <?php echo $result["location"]["locality"]?>
+                    At: <?php echo $result['location']['subLocality']?>, <?php echo $result['location']['locality']?>
                   </div>
                   <div id="img-gallery">
-                    <img src="<?php echo $result["image"]?>"/>
+                    <img src="<?php echo $result['image']?>"/>
                   </div>
                 </div>
               </div>
