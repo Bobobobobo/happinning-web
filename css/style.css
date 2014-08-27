@@ -2,8 +2,8 @@
 	margin: 20px 20px;
 }
 
-body {
-  background: #44C7F4;
+#homepage body {
+  background: #3C3C3C;
   color: #8c8c8c;
 }
 
@@ -38,6 +38,11 @@ body {
 
 /*****  Pin Page *****
 ******           *****/
+
+body {
+  background: #44C7F4;
+  color: #8c8c8c;
+}
 
 #pin-page .navbar-default {
   border-color: #0071BC ;
