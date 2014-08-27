@@ -58,6 +58,7 @@ body {
 
 #profile-image {
   max-height: 19px;
+  padding: 0px 10px;
 }
 
 #pin-map {
