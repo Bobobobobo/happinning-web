@@ -68,7 +68,7 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
-              <li><a href="#"><i class="fa fa-power-off fa-lg"></i>Logout</a></li>
+              <li><a href="#"><i class="fa fa-power-off fa-lg" style="padding-right: 5px;"></i>Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
