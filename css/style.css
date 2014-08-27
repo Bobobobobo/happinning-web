@@ -51,6 +51,10 @@ body {
   border-color: #0071BC;
 }
 
+#profile-image img {
+  height: 19px;
+}
+
 #pin-map {
   min-height: 200px;
   border: 1px solid #ACACAC;

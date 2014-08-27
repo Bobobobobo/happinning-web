@@ -84,7 +84,7 @@
                     <h4><?php echo $result["text"]?></h4>
                   </div>
                   <div class="col-md-3">
-                    <h6 class="pull-right">by <a href="#">name</a></h6>
+                    <h6 class="pull-right">by <img id="profile-image" src="<?php echo $result["userImage"]?>"/> <a href="/user/<?php echo $result["userId"]?>"><?php echo $result["username"]?></a></h6>
                   </div>
                 </div>
               </div>
@@ -100,10 +100,10 @@
               <div class="col-md-8">
                 <div id="pin-detail" class="pull-right">
                   <div id="local-block">
-                    At: sublocation, locality
+                    At: <?php echo $result["subLocality"]?>, <?php echo $result["locality"]?>
                   </div>
                   <div id="img-gallery">
-                    <img src="/images/blank.jpg"/>
+                    <img src="<?php echo $result["image"]?>"/>
                   </div>
                 </div>
               </div>
