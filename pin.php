@@ -93,11 +93,9 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-md-4">
-                <?php if( !empty($result["location") ): ?>
                   <div class="acf-map">
                     <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][2]; ?>"></div>
                   </div>
-                <?php endif; ?>
               </div>
               <div class="col-md-8">
                 <div id="pin-detail" class="pull-right">
