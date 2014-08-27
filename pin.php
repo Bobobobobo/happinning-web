@@ -118,6 +118,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/googlemap.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $('.acf-map').each(function(){
+
+          render_map( $(this) );
+
+        });
+
+      });
+    </script>
   </body>
 </html>
