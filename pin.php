@@ -85,7 +85,7 @@
                     <h4><?php echo $result['text']?></h4>
                   </div>
                   <div class="col-md-3">
-                    <h6 class="pull-right">by <img id="profile-image" src="<?php echo $result['userImage']?>"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h6>
+                    <h6 class="pull-right">by <img id="profile-image" src="http://identicon.org/?t=<?php echo $result['userId']?>&s=19"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h6>
                   </div>
                 </div>
               </div>
