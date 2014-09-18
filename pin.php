@@ -111,10 +111,9 @@
                       </a>
                     </div>
                     <div id="collapseMap" class="panel-collapse collapse">
-                      <?php if( !empty($result["location") ): ?>
-                        <div class="acf-map">
-                          <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][2]; ?>"></div>
-                        </div>
+                      <div class="acf-map">
+                        <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][0]; ?>"></div>
+                      </div>
                       <?php endif; ?>
                     </div>
                   </div>
