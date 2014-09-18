@@ -97,8 +97,23 @@ body {
 .pin-comment {
   background-color: #e0e0e0;
   margin: 1px 0px;
-  padding: 2px 10px;
+  padding: 5px 10px;
   font-size: 12px;
+}
+
+.pin-comment img {
+  height: 19px;
+  padding-right: 5px;
+}
+
+.pin-comment a {
+  padding-right: 5px;
+  color: #D03851;
+}
+
+.comment-2 {
+  color: #8c8c8c;
+  text-align: right;
 }
 
 .last {
