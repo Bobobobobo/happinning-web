@@ -101,9 +101,9 @@
                       <div id="pin-comments">
                         <?php $i = 0; while ($i < $comment['commentsNum']):?>
                           <div class="pin-comment">
-                            <?php $comments = comment['comments'];?>
-                            <?php $c = $comments[i]; ?>
-                            <img src="<?php echo c['userImage']?>" class="commentor-img"/><a href="#"><?php echo c['username']; ?></a><i>: <?php echo c['comment']; ?></i>
+                            <?php $comments = $comment['comments'];?>
+                            <?php $c = $comments[$i]; ?>
+                            <img src="<?php echo $c['userImage']?>" class="commentor-img"/> <a href="#"><?php echo $c['username']; ?></a><i>: <?php echo $c['comment']; ?></i>
                           </div>
                         <?php $i++; endwhile; ?>
                       </div>
