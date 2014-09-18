@@ -93,17 +93,17 @@
                       <input type="text" class="form-control" placeholder="Comment here..."></input>
                     </div>
                   </div>
-                  <?php if ($comment['commentsNum'] > 0) ?>
+                  <?php if ($comment['commentsNum'] > 0): ?>
                     <div id="comment-block">
                       <div id="pin-title">
                         <?php echo $result['text']?>
                       </div>
                       <div id="pin-comments">
-                        <?php $i = 0; while ($i < $comment['commentsNum']): $comments = $comment['comments'];?>
+                        <?php $i = 0; while ($i < $comment['commentsNum']):?>
                           <div class="pin-comment">
-                            <?php echo $comments[0]; ?>
+                            <?php echo $comment['comments'][i]['comment']; ?>
                           </div>
-                        <?php endwhile; ?>
+                        <?php $i++; endwhile; ?>
                         <div class="pin-comment">
                           COMMENT 2
                         </div>
