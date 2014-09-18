@@ -101,21 +101,11 @@
                       <div id="pin-comments">
                         <?php $i = 0; while ($i < $comment['commentsNum']):?>
                           <div class="pin-comment">
-                            <?php echo $comment['comments'][i]['comment']; ?>
+                            <?php $comments = comment['comments'];?>
+                            <?php $c = $comments[i]; ?>
+                            <img src="<?php echo c['userImage']?>" class="commentor-img"/><a href="#"><?php echo c['username']; ?></a><i>: <?php echo c['comment']; ?></i>
                           </div>
                         <?php $i++; endwhile; ?>
-                        <div class="pin-comment">
-                          COMMENT 2
-                        </div>
-                        <div class="pin-comment">
-                          COMMENT 3
-                        </div>
-                        <div class="pin-comment">
-                          COMMENT 4
-                        </div>
-                        <div class="pin-comment">
-                          COMMENT 5
-                        </div>
                       </div>
                     </div>
                   <?php endif ?>
