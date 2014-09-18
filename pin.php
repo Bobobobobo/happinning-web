@@ -58,7 +58,7 @@
                       </div>
                       <div class="col-md-9">
                         <div id="author-block">
-                          <h4><img id="profile-image" src="http://identicon.org/?t=<?php echo $result['userId']?>&s=19"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['userId']?></a></h4>
+                          <h4><img id="profile-image" src="http://identicon.org/?t=<?php echo $result['userId']?>&s=19"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h4>
                         </div>
                         <div id="local-block">
                           At: <?php echo $result['location']['subLocality']?>, <?php echo $result['location']['locality']?>
@@ -84,7 +84,7 @@
                   </div>
                   <div id="comment-block">
                     <div id="pin-title">
-                      TITLE
+                      <?php echo $result['text']?>
                     </div>
                     <div id="pin-comments">
                       <div class="pin-comment">
