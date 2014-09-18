@@ -3,7 +3,7 @@
 }
 
 #homepage {
-  background: #3C3C3C;
+  background: #D03851;
   color: #8c8c8c;
 }
 
@@ -36,24 +36,39 @@
   margin: 10px;
 }
 
+/*****  Panels   *****
+******           *****/
+
+.pin-panel {
+  background-color: #D03851;
+  border: 1px solid #D03851;
+  color: #FFF;
+}
+
+.pin-panel-heading {
+
+  padding: 10px 15px;
+}
+
+#pin-title {
+  color: #111;
+}
+
+.pin-panel-body {
+  background-color: #FFF;
+}
+
 /*****  Pin Page *****
 ******           *****/
 
 body {
-  background: #44C7F4;
+  background: #FFF;
   color: #8c8c8c;
 }
 
-#pin-page .navbar-default {
-  border-color: #0071BC ;
-}
-
 #pin-block {
-  margin-top: 80px;  
-}
-
-#pin-block .panel-default {
-  border-color: #0071BC;
+  margin-top: 20px;  
+  margin-bottom: 20px;  
 }
 
 #profile-image {
@@ -61,26 +76,72 @@ body {
   padding: 0px 5px;
 }
 
-#pin-map {
-  min-height: 200px;
-  border: 1px solid #ACACAC;
+#pin-detail {
+  color: #8c8c8c;
 }
 
-#local-block {
-  border-bottom: 1px solid #0071BC;
+
+#info-block, #comment-block {
+  border-bottom: 1px solid #D03851;
   padding: 10px;
 }
 
-#img-gallery {
+#author-block a {
+  color: #D03851;
+}
+
+#comment-block {
+  color: #000;
+}
+
+.pin-comment {
+  background-color: #e0e0e0;
+  margin: 1px 0px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+.last {
+  border-right: 1px solid #D03851;
+}
+
+#interaction-block {
+  color: #8c8c8c;
+}
+
+#interaction-block i {
+  padding: 10px 0px;
+  color: #D03851;
+}
+
+#interaction-block a {
+  padding-top: 10px;
+  color: #8c8c8c;
+}
+
+#map-block {
+  border-left: 1px solid #D03851;
+  border-bottom: 1px solid #D03851;
+  color: #8c8c8c;
   padding: 10px;
+}
+
+#map-block a {
+  color: #8c8c8c;
+}
+
+.icons {
+  color: #D03851;
 }
 
 #img-gallery img {
-  height: 200px;
+  width: 100%;
 }
+
 
 /*****  Google map *****
 ******             *****/
+
 
 .acf-map {
   width: 100%;
