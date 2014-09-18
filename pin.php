@@ -114,7 +114,6 @@
                       <div class="acf-map">
                         <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][0]; ?>"></div>
                       </div>
-                      <?php endif; ?>
                     </div>
                   </div>
                   <!-- map-block -->
