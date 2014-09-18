@@ -1,4 +1,5 @@
 <?php
+  // get pin detail
   $pinID = $_GET['id'];
   $url='http://54.179.16.196:3000/getPin?pinID='.$pinID;
   $ch = curl_init();
@@ -6,6 +7,16 @@
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_URL, $url);
   $result = json_decode(curl_exec($ch), true);
+
+  curl_close($ch);
+
+  // get comments from pin
+  $url='http://54.179.16.196:3000/getComments?pinID='.$pinID;
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_URL, $url);
+  $comment = json_decode(curl_exec($ch), true);
 
   curl_close($ch);
   //var_dump($result);
@@ -82,28 +93,32 @@
                       <input type="text" class="form-control" placeholder="Comment here..."></input>
                     </div>
                   </div>
-                  <div id="comment-block">
-                    <div id="pin-title">
-                      <?php echo $result['text']?>
+                  <?php if ($comment['commentsNum'] > 0) ?>
+                    <div id="comment-block">
+                      <div id="pin-title">
+                        <?php echo $result['text']?>
+                      </div>
+                      <div id="pin-comments">
+                        <?php $i = 0; while ($i < $comment['commentsNum']): $comments = $comment['comments'];?>
+                          <div class="pin-comment">
+                            <?php echo $comments[0]; ?>
+                          </div>
+                        <?php endwhile; ?>
+                        <div class="pin-comment">
+                          COMMENT 2
+                        </div>
+                        <div class="pin-comment">
+                          COMMENT 3
+                        </div>
+                        <div class="pin-comment">
+                          COMMENT 4
+                        </div>
+                        <div class="pin-comment">
+                          COMMENT 5
+                        </div>
+                      </div>
                     </div>
-                    <div id="pin-comments">
-                      <div class="pin-comment">
-                        COMMENT 1
-                      </div>
-                      <div class="pin-comment">
-                        COMMENT 2
-                      </div>
-                      <div class="pin-comment">
-                        COMMENT 3
-                      </div>
-                      <div class="pin-comment">
-                        COMMENT 4
-                      </div>
-                      <div class="pin-comment">
-                        COMMENT 5
-                      </div>
-                    </div>
-                  </div>
+                  <?php endif ?>
                   <div id="map-block">
                     <div class="map-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseMap">
