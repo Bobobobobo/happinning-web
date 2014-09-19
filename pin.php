@@ -54,9 +54,9 @@
           <div class="pin-panel-body">
             <div class="row">
               <div class="col-md-8">
-                  <div id="img-gallery">
-                    <img src="http://54.179.16.196:3000<?php echo $result['image']?>"/>
-                  </div>
+                <div class="acf-map">
+                  <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][0]; ?>"></div>
+                </div>
               </div>
               <div class="col-md-4">
                 <div id="pin-detail">
@@ -116,13 +116,13 @@
                   <?php endif ?>
                   <div id="map-block">
                     <div class="map-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseMap">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseGallery">
                         Maps <i class="fa fa-chevron-circle-down"></i>
                       </a>
                     </div>
-                    <div id="collapseMap" class="panel-collapse collapse">
-                      <div class="acf-map">
-                        <div class="marker" data-lat="<?php echo $result['location']['coordinates'][1]; ?>" data-lng="<?php echo $result['location']['coordinates'][0]; ?>"></div>
+                    <div id="collapseGallery" class="panel-collapse collapse">
+                      <div id="img-gallery">
+                        <img src="http://54.179.16.196:3000<?php echo $result['image']?>"/>
                       </div>
                     </div>
                   </div>
