@@ -117,7 +117,7 @@
                   <div id="map-block">
                     <div class="map-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseGallery">
-                        Maps <i class="fa fa-chevron-circle-down"></i>
+                        Images <i class="fa fa-chevron-circle-down"></i>
                       </a>
                     </div>
                     <div id="collapseGallery" class="panel-collapse collapse">
