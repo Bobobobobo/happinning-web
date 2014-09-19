@@ -75,7 +75,7 @@
                           At: <?php echo $result['location']['subLocality']?>, <?php echo $result['location']['locality']?>
                         </div>
                         <div id="date-block">
-                          <?php echo $result['uploadDate']?> mins ago
+                          <span class="elapse-time"><?php echo $result['uploadDate']?></span>
                         </div>
                       </div>
                     </div>
@@ -107,7 +107,7 @@
                               <img src="<?php echo $c['userImage']?>" class="commentor-img"/> <a href="#"><?php echo $c['username']; ?></a><i>: <?php echo $c['comment']; ?></i>
                             </div>
                             <div class="comment-2">
-                              <?php echo $c['commentDate']?> ago
+                              <span class="elapse-time"><?php echo $c['commentDate']?></span>
                             </div>
                           </div>
                         <?php $i++; endwhile; ?>
@@ -139,6 +139,7 @@
     </div>
     <!-- pin-block -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/moment.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
@@ -154,6 +155,12 @@
         });
 
       });
+
+      var nodeList = document.getElementsByClassName("elapse-time");
+      for (var i = 0, length = nodeList.length; i < length; i++) {
+        var x = moment.unix(nodeList[i].innerHTML).fromNow();
+        nodeList[i].innerHTML = x;
+      };
     </script>
   </body>
 </html>
