@@ -158,7 +158,7 @@
 
       var nodeList = document.getElementsByClassName("elapse-time");
       for (var i = 0, length = nodeList.length; i < length; i++) {
-        var x = moment.unix(nodeList[i].innerHTML).fromNow();
+        var x = moment(nodeList[i].innerHTML).fromNow();
         nodeList[i].innerHTML = x;
       };
     </script>
