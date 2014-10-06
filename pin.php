@@ -106,7 +106,8 @@
                             <?php $comments = $comment['comments'];?>
                             <?php $c = $comments[$i]; ?>
                             <div class="comment-1">
-                              <img src="<?php echo $c['userImage']?>" class="commentor-img"/> <a href="#"><?php echo $c['username']; ?></a><i>: <?php echo $c['comment']; ?></i>
+                              <?php $commentorURL = 'http://identicon.org/?t='.$c['userImage']."&s=20"?>
+                              <img style="background-image: url('<?php echo $commentorURL ?>'); width: 20px; height: 20px;" class="commentor-img"/> <a href="#"><?php echo $c['username']; ?></a><i>: <?php echo $c['comment']; ?></i>
                             </div>
                             <div class="comment-2">
                               <span class="elapse-time"><?php echo $c['commentDate']?></span>
