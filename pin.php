@@ -7,7 +7,9 @@
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_URL, $url);
   $result = json_decode(curl_exec($ch), true);
-  $profile = 'http://identicon.org/?t='.$result['userId']."&s=19";
+
+  // create profile image url
+  $profile = 'http://identicon.org/?t='.$result['userId']."&s=20";
   curl_close($ch);
 
   // get comments from pin
@@ -69,7 +71,7 @@
                       </div>
                       <div class="col-md-9">
                         <div id="author-block">
-                          <h4><img id="profile-image" style="background-image:url('<?php echo $profile?>')"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h4>
+                          <h4><img style="background-image:url('<?php echo $profile?>'); width: 20px; height: 20px;"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h4>
                         </div>
                         <div id="local-block">
                           At: <?php echo $result['location']['subLocality']?>, <?php echo $result['location']['locality']?>
