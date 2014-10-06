@@ -145,8 +145,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/googlemap.js"></script>
-    <script>  
-      moment().format();
+    <script>
       $(document).ready(function(){
 
         $('.acf-map').each(function(){
@@ -159,7 +158,8 @@
 
       var nodeList = document.getElementsByClassName("elapse-time");
       for (var i = 0, length = nodeList.length; i < length; i++) {
-        var x = moment(nodeList[i].innerHTML).fromNow();
+        moment().format();
+	var x = moment(parseInt(nodeList[i].innerHTML)).fromNow();
         nodeList[i].innerHTML = x;
       };
     </script>
