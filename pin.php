@@ -7,7 +7,7 @@
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($ch, CURLOPT_URL, $url);
   $result = json_decode(curl_exec($ch), true);
-
+  $profile = 'http://identicon.org/?t='.$result['userId']."&s=19";
   curl_close($ch);
 
   // get comments from pin
@@ -69,7 +69,7 @@
                       </div>
                       <div class="col-md-9">
                         <div id="author-block">
-                          <h4><img id="profile-image" src="http://identicon.org/?t=<?php echo $result['userId']?>&s=19"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h4>
+                          <h4><img id="profile-image" style="background-image:url('<?php echo $profile?>')"/> <a href="/user/<?php echo $result['userId']?>"><?php echo $result['username']?></a></h4>
                         </div>
                         <div id="local-block">
                           At: <?php echo $result['location']['subLocality']?>, <?php echo $result['location']['locality']?>
@@ -120,7 +120,7 @@
                         Images <i class="fa fa-chevron-circle-down"></i>
                       </a>
                     </div>
-                    <div id="collapseGallery" class="panel-collapse collapse">
+                    <div id="collapseGallery" class="panel-collapse collapse in">
                       <div id="img-gallery">
                         <img src="http://54.179.16.196:3000<?php echo $result['image']?>"/>
                       </div>
@@ -145,7 +145,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/googlemap.js"></script>
-    <script>
+    <script>  
+      moment().format();
       $(document).ready(function(){
 
         $('.acf-map').each(function(){
